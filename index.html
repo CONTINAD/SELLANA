@@ -25,10 +25,12 @@
     style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden;">
     <div class="container">
       <!-- Banner Placeholder -->
-      <div class="banner-container" style="margin-bottom: 2rem;">
+      <div class="banner-container"
+        style="margin-bottom: 2rem; width: 100%; max-width: 1000px; margin-left: auto; margin-right: auto;">
         <img src="/assets/banner.png" alt="$SELLANA Banner"
-          style="max-width: 100%; border-radius: 10px; border: 2px solid var(--crash-red); box-shadow: 0 0 30px rgba(255, 59, 48, 0.3);">
-        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 0.5rem;">(Please place banner.png in public/assets)</p>
+          style="width: 100%; height: auto; aspect-ratio: 3/1; object-fit: cover; border-radius: 10px; border: 2px solid var(--crash-red); box-shadow: 0 0 30px rgba(255, 59, 48, 0.3);">
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 0.5rem;">(Please place banner.png [1500x500] in
+          public/assets)</p>
       </div>
 
       <h1 class="glitch"
@@ -44,8 +46,8 @@
       <!-- Coin Image -->
       <div style="margin: 2rem 0;">
         <img src="/assets/coin.png" alt="Coin"
-          style="width: 200px; height: 200px; animation: glitch 2s infinite alternate;">
-        <p style="font-size: 0.8rem; opacity: 0.5;">(Please place coin.png in public/assets)</p>
+          style="width: 350px; max-width: 80%; aspect-ratio: 1/1; animation: glitch 2s infinite alternate;">
+        <p style="font-size: 0.8rem; opacity: 0.5;">(Please place coin.png [500x500] in public/assets)</p>
       </div>
 
       <div class="contract-box"
