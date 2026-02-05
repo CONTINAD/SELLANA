@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg-color: #050505;
+  --text-color: #ffffff;
+  --crash-red: #ff3b30;
+  --fake-green: #34c759;
+  --void-black: #000000;
+  --font-main: 'Inter', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-red { color: var(--crash-red); }
+.text-green { color: var(--fake-green); }
+.font-mono { font-family: var(--font-mono); }
+.uppercase { text-transform: uppercase; }
+
+/* Glitch Effect */
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+
+.glitch:hover {
+  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  color: var(--crash-red);
+}
+
+/* Background Grids */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(255, 59, 48, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 59, 48, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Components */
+.btn {
+  background: var(--crash-red);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 900;
+  border: 2px solid var(--crash-red);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-mono);
+  display: inline-block;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--crash-red);
+  box-shadow: 0 0 20px var(--crash-red);
+}
+
+section {
+  padding: 4rem 0;
+}

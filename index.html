@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$SELLANA - The Crash is Here</title>
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+
+  <!-- Header / Nav -->
+  <header
+    style="padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 100; background: rgba(5,5,5,0.8); backdrop-filter: blur(5px);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <h1 class="font-mono text-red" style="font-size: 1.5rem; font-weight: 900;">$SELLANA</h1>
+      <a href="#chart" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">VIEW CHART</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero"
+    style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden;">
+    <div class="container">
+      <!-- Banner Placeholder -->
+      <div class="banner-container" style="margin-bottom: 2rem;">
+        <img src="/assets/banner.png" alt="$SELLANA Banner"
+          style="max-width: 100%; border-radius: 10px; border: 2px solid var(--crash-red); box-shadow: 0 0 30px rgba(255, 59, 48, 0.3);">
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 0.5rem;">(Please place banner.png in public/assets)</p>
+      </div>
+
+      <h1 class="glitch"
+        style="font-size: clamp(3rem, 10vw, 6rem); line-height: 1; font-weight: 900; margin-bottom: 1rem;">
+        <span class="text-red">CRASH</span> THE MARKET
+      </h1>
+
+      <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Everything must go. The candles are red. The panic is real.
+        <span class="font-mono text-green">But you're still buying?</span>
+      </p>
+
+      <!-- Coin Image -->
+      <div style="margin: 2rem 0;">
+        <img src="/assets/coin.png" alt="Coin"
+          style="width: 200px; height: 200px; animation: glitch 2s infinite alternate;">
+        <p style="font-size: 0.8rem; opacity: 0.5;">(Please place coin.png in public/assets)</p>
+      </div>
+
+      <div class="contract-box"
+        style="background: #1a1a1a; padding: 1rem; border-radius: 8px; border: 1px solid #333; display: inline-flex; align-items: center; gap: 1rem; margin-top: 2rem;">
+        <span class="font-mono text-red">CA:</span>
+        <span class="font-mono" id="contract-address">0x00000000000000000000000000000000</span>
+        <button class="btn" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;"
+          onclick="navigator.clipboard.writeText('0x00000000000000000000000000000000')">COPY</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div style="background: var(--crash-red); color: black; padding: 0.5rem 0; overflow: hidden; white-space: nowrap;">
+    <div
+      style="display: inline-block; animation: scroll 20s linear infinite; font-weight: 900; font-family: var(--font-mono); font-size: 1.5rem;">
+      SELL SELL SELL PANIC SELL SELL SELL PANIC SELL SELL SELL PANIC SELL SELL SELL PANIC SELL SELL SELL PANIC
+    </div>
+  </div>
+  <style>
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <!-- Chart Section -->
+  <section id="chart">
+    <div class="container">
+      <h2 class="font-mono text-red" style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">LIVE CRASH
+        CHART</h2>
+      <div style="width: 100%; height: 600px; border: 2px solid var(--crash-red); background: #000;">
+        <iframe width="100%" height="100%" src="https://dexscreener.com/" title="DexScreener" frameborder="0"></iframe>
+      </div>
+      <p style="text-align: center; margin-top: 1rem; opacity: 0.7;">Watch it go to zero.</p>
+    </div>
+  </section>
+
+  <footer style="padding: 2rem 0; text-align: center; border-top: 1px solid #333; margin-top: 4rem;">
+    <p class="font-mono text-red">© 2026 $SELLANA. NOT FINANCIAL ADVICE. WE ARE ALREADY REKT.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
